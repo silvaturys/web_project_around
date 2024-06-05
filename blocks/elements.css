@@ -1,6 +1,6 @@
 .elements{
   display: grid;
-  grid-template-columns: repeat(3, auto) ;
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   margin-top: 50px;
   margin-left: 200px;
@@ -27,7 +27,7 @@
 .element__description{
   display: flex;
   justify-content: space-between;
-  margin-left: 21px ;
+  margin-left: 21px;
   margin-right: 15px;
 }
 
@@ -58,7 +58,6 @@
 @media screen and (max-width: 1024px){
   .elements{
     max-width: 585px;
-    display: grid;
     grid-template-columns: repeat(2, auto) ;
     grid-template-rows: repeat(3, auto);
     justify-content: center;
@@ -69,7 +68,6 @@
   .elements{
     display: grid;
     grid-template-columns: repeat(1, auto) ;
-    grid-template-rows: repeat(6, auto);
     margin-left: 19px;
 }
 }
