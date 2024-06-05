@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arthur Michel" />
+  <meta name="description" content="Travel site" />
+  <meta name="keywords" content="Explore, US, Mountain"/>
+  <link rel="stylesheet" href="pages/index.css">
+  <link rel="shortcut icon" href="./favicon.svg"/>
+  <link rel="preconnect" href="./vendor/fonts/Inter-4.0/">
+  <title>Around The U.S.</title>
+</head>
+
+<body>
+  <div class="page">
+<!--LOGO-->
+    <header class="header">
+      <img
+      src="favicon.svg"
+      alt="logo around the us"
+      class="header__logo">
+      <img
+      src="./images/Line.svg"
+      alt="linha"
+      class="header__line">
+
+    </header>
+    <main class="content">
+<!--AREA DO PERFIL-->
+      <section class="profile">
+        <img
+        src="./images/perfil_image.png"
+        alt="imagem de um idoso"
+        class="profile__image">
+        <div class="profile__intro">
+          <div class="profile__container">
+            <h1 class="profile__name"> Jacques Cousteau </h1>
+            <button type="button" class="profile__edit-button">
+              <img
+              src="./images/edit__vector.svg"
+              alt="icone de editar algo, uma caneta">
+            </button>
+          </div>
+          <p class="profile__area"> Explorar </p>
+        </div>
+        <button type="button" class="profile__add-button">
+          <img
+          src="./images/add__button.svg"
+          alt="símbolo de adição">
+        </button>
+      </section>
+      <!--EDIÇÃO DE PERFIL-->
+      <section class="popup" id="editProfilePopup">
+        <button class="popup__close-button" type="button" id="closePopupButton">
+          <img
+          src="./images/Close Icon.svg"
+          alt="simbolo de X, fechar"
+          class="popup__close-icon">
+        </button>
+        <form class="popup__form">
+          <fieldset class="popup__fieldset">
+            <h3 class="popup__title"> Editar Perfil </h3>
+            <input
+            type="text"
+            class="popup__input"
+            id="name"
+            placeholder="Nome"
+            autocomplete="name">
+            <input
+            type="text"
+            class="popup__input"
+            id="area"
+            placeholder="Sobre mim"
+
+              />
+          </fieldset>
+          <button class="popup__button" type="submit">
+            Salvar
+          </button>
+        </form>
+      </section>
+<!--AREA DAS IMAGENS-->
+      <section class="elements">
+        <!--Yosemite-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/yosemite_image.png"
+        alt="imagem de um rio localizado em Yosemite">
+        <div class="element__description">
+          <h2 class="element__title"> Vale de Yosemite </h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      <!--Louise-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/louiseimage.png"
+        alt="imagem de uma montanha e lago localizado em louise">
+        <div class="element__description">
+          <h2 class="element__title"> Lago Louise </h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      <!--Montanhas-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/montanhas__care_image.png"
+        alt="imagem de uma montanha">
+        <div class="element__description">
+          <h2 class="element__title"> Montanhas Careeee</h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      <!--Latemar-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/latemar_image.png"
+        alt="imagem de picos em Latemar">
+        <div class="element__description">
+          <h2 class="element__title"> Latemar </h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      <!--Vanoise-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/vanoise_image.png"
+        alt="imagem de lago e montanha em Vanoise">
+        <div class="element__description">
+          <h2 class="element__title"> Vanoise Nationalblabla </h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      <!--Lago de Braies-->
+      <div class="element">
+        <img
+        class="element__image"
+        src="./images/braies_image.png"
+        alt="imagem de lago e montanha gélida em Braies">
+        <div class="element__description">
+          <h2 class="element__title"> Lago di Braies </h2>
+          <img
+          class="element__icon"
+          src="./images/heart.svg"
+          alt="icone de coração">
+          <!--
+          <img
+          class="element__dark-icon"
+          src="./images/darkheart.svg"
+          alt="icone de coração escuro"> -->
+        </div>
+      </div>
+      </section>
+    </main>
+<!--RODAPÉ-->
+    <footer class="footer">
+      <p class="footer__copyright"> &#169 2024 Arthur Michel S F </p>
+    </footer>
+  </div>
+  <script src="./script/index.js"></script>
+</body>
+</html>
