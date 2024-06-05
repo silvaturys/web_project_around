@@ -3,16 +3,15 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   margin-top: 50px;
-  margin-left: 200px;
-  max-width: 880px;
+  justify-content: center;
+  column-gap: 17px;
+  row-gap: 20px;
 }
 
 .element{
   row-gap: 20px;
   max-width: 282px;
   max-height: 361px;
-  margin-bottom: 20px;
-  margin-right: 17px;
   background-color: rgb(255, 255, 255);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -55,19 +54,18 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px){
-  .elements{
-    max-width: 585px;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    justify-content: center;
-}
-}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .elements {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  }
+  }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .elements{
     display: grid;
     grid-template-columns: repeat(1, auto);
-    margin-left: 19px;
 }
 }
