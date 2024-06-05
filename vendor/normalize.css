@@ -25,7 +25,7 @@ body {
 }
 
 /**
- * Renderize o elemento `main` de forma consistente no IE.
+ * Renderize o elemento main de forma consistente no IE.
  */
 
 main {
@@ -33,8 +33,8 @@ main {
 }
 
 /**
- * Corrija o tamanho da fonte e margem nos elementos `<h1>` dentro dos contextos `section` e
- * `article` no Chrome, Firefox e Safari.
+ * Corrija o tamanho da fonte e margem nos elementos <h1> dentro dos contextos section e
+ * article no Chrome, Firefox e Safari.
  */
 
 h1 {
@@ -58,7 +58,7 @@ hr {
 
 /**
  * 1. Corrija a herança e o dimensionamento do tamanho da fonte em todos os navegadores.
- * 2. Corrija o tamanho ímpar da fonte `em` em todos os navegadores.
+ * 2. Corrija o tamanho ímpar da fonte em em todos os navegadores.
  */
 
 pre {
@@ -99,7 +99,7 @@ strong {
 
 /**
  * 1. Corrija a herança e o dimensionamento do tamanho da fonte em todos os navegadores.
- * 2. Corrija o tamanho ímpar da fonte `em` em todos os navegadores.
+ * 2. Corrija o tamanho ímpar da fonte em em todos os navegadores.
  */
 
 code,
@@ -118,7 +118,7 @@ small {
 }
 
 /**
- * Impeça que os elementos `sub` e `sup` afetem a altura da linha em
+ * Impeça que os elementos sub e sup afetem a altura da linha em
  * todos os navegadores.
  */
 
@@ -234,9 +234,9 @@ fieldset {
 
 /**
  * 1. Corrija a quebra de texto no Edge e no IE.
- * 2. Corrija a herança de cores dos elementos `fieldset` no IE.
+ * 2. Corrija a herança de cores dos elementos fieldset no IE.
  * 3. Remova o preenchimento para que os desenvolvedores não sejam pegos de surpresa quando zerarem
- *     elementos `fieldset` em todos os navegadores.
+ *     elementos fieldset em todos os navegadores.
  */
 
 legend {
@@ -304,7 +304,7 @@ textarea {
 
 /**
  * 1. Corrija a incapacidade de estilizar tipos clicáveis no iOS e no Safari.
- * 2. Altere as propriedades da fonte para `inherit` no Safari.
+ * 2. Altere as propriedades da fonte para inherit no Safari.
  */
 
 ::-webkit-file-upload-button {
