@@ -52,9 +52,6 @@
 
 .popup__button {
   font-family:  "Inter", "sans-serif";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.94px;
   text-align: center;
   background-color: #000000;
   color: #ffffff;
@@ -95,7 +92,7 @@
 
   .popup__form{
     max-width: 238px;
-    padding: 25px 22px ;
+    padding: 25px 22px;
   }
 
   .popup__title {
@@ -105,5 +102,10 @@
   .popup__close-button {
     top: -50px;
     right: 0;
+  }
+    .popup__button{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
   }
 }

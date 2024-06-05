@@ -58,7 +58,7 @@
 @media screen and (max-width: 1024px){
   .elements{
     max-width: 585px;
-    grid-template-columns: repeat(2, auto) ;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     justify-content: center;
 }
@@ -67,7 +67,7 @@
 @media screen and (max-width: 768px){
   .elements{
     display: grid;
-    grid-template-columns: repeat(1, auto) ;
+    grid-template-columns: repeat(1, auto);
     margin-left: 19px;
 }
 }
