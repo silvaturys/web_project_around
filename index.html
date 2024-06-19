@@ -49,6 +49,7 @@
       </section>
       <!--EDIÇÃO DE PERFIL-->
       <section class="popup" id="editProfilePopup">
+        <div class="popup__content">
         <button class="popup__close-button" type="button" id="closePopupButton">
           <img
           src="./images/CloseIcon.svg"
@@ -68,101 +69,83 @@
             type="text"
             class="popup__input"
             id="area"
-            placeholder="Sobre mim"
-
-              />
+            placeholder="Sobre mim"/>
           </fieldset>
           <button class="popup__button" type="submit">
             Salvar
           </button>
         </form>
+      </div>
       </section>
+      <!--ADIÇÃO DE LOCAL-->
+      <section class="popup" id="addPostPopup">
+        <button class="popup__close-button" type="button" id="closeAddPopupButton">
+          <img
+          src="./images/CloseIcon.svg"
+          alt="simbolo de X, fechar"
+         class="popup__close-icon">
+        </button>
+        <form class="popup__form" id="addpostform">
+          <fieldset class="popup__fieldset">
+            <h3 class="popup__title"> Novo Local </h3>
+            <input
+            type="text"
+            class="popup__input"
+            id="title"
+            placeholder="Título">
+            <input
+            type="text"
+            class="popup__input"
+            id="image"
+            placeholder="Link de imagem"/>
+          </fieldset>
+          <button class="popup__button" type="submit">
+            Criar
+          </button>
+        </form>
+      </section>
+      <!--AMPLIAÇÃO DE IMAGEM-->
+      <section class="popup" id="popupimage">
+        <div class="popup__content-image">
+          <button class="popup__close-button" id="closeimagepopup">
+            <img
+              class="popup__close-icon"
+              src="images/CloseIcon.svg"
+              alt="simbolo de X, fechar"
+            />
+          </button>
+          <img alt="imagem ampliada" class="popup__image"/>
+          <p class="popup__paragraph"></p>
+        </div>
+      </section>
+
 <!--AREA DAS IMAGENS-->
       <section class="elements">
-        <!--Yosemite-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/yosemite_image.png"
-        alt="imagem de um rio localizado em Yosemite">
-        <div class="element__description">
-          <h2 class="element__title"> Vale de Yosemite </h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
-      <!--Louise-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/louiseimage.png"
-        alt="imagem de uma montanha e lago localizado em louise">
-        <div class="element__description">
-          <h2 class="element__title"> Lago Louise </h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
-      <!--Montanhas-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/montanhas__care_image.png"
-        alt="imagem de uma montanha">
-        <div class="element__description">
-          <h2 class="element__title"> Montanhas Careeee</h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
-      <!--Latemar-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/latemar_image.png"
-        alt="imagem de picos em Latemar">
-        <div class="element__description">
-          <h2 class="element__title"> Latemar </h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
-      <!--Vanoise-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/vanoise_image.png"
-        alt="imagem de lago e montanha em Vanoise">
-        <div class="element__description">
-          <h2 class="element__title"> Vanoise Nationalblabla </h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
-      <!--Lago de Braies-->
-      <div class="element">
-        <img
-        class="element__image"
-        src="./images/braies_image.png"
-        alt="imagem de lago e montanha gélida em Braies">
-        <div class="element__description">
-          <h2 class="element__title"> Lago di Braies </h2>
-          <img
-          class="element__icon"
-          src="./images/heart.svg"
-          alt="icone de coração">
-        </div>
-      </div>
+        <template id="elements-template">
+          <div class="element">
+            <button
+            class="element__button element__button_trash"
+            type="button">
+              <img
+                src="images/Trash.svg"
+                alt="icone de lixeira"
+                class="element__icon element__icon_trash"
+              />
+            </button>
+            <img class="element__image">
+            <div class="element__description">
+              <h2 class="element__title"></h2>
+              <button
+              class="element__button element__button_heart"
+              type="button">
+                <img
+                class="element__icon element__icon_heart"
+                src="./images/heart.svg"
+                alt="icone de coração">
+              </button>
+            </div>
+          </div>
+        </template>
       </section>
     </main>
 <!--RODAPÉ-->

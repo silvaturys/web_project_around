@@ -24,8 +24,12 @@
   }
 
   .header__logo{
-    width: 126px;
+    width: 100vw;
     height: 24px;
     margin-bottom: 32px;
+  }
+
+  .header__line{
+    width: 100vw;
   }
 }
