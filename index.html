@@ -11,17 +11,14 @@
   <link rel="preconnect" href="./vendor/fonts/Inter-4.0/">
   <title>Around The U.S.</title>
 </head>
-
 <body>
   <div class="page">
 <!--LOGO-->
 <header class="header">
-  <div>
-  <img src="favicon.svg" alt="logo around the us" class="header__logo">
-  </div>
-  <div>
-  <img src="./images/Line.svg" alt="linha" class="header__line">
-  </div>
+  <img
+  src="favicon.svg"
+  alt="logo around the us"
+  class="header__logo">
   </header>
     <main class="content">
 <!--AREA DO PERFIL-->
@@ -79,37 +76,39 @@
       </section>
       <!--ADIÇÃO DE LOCAL-->
       <section class="popup" id="addPostPopup">
-        <button class="popup__close-button" type="button" id="closeAddPopupButton">
-          <img
-          src="./images/CloseIcon.svg"
-          alt="simbolo de X, fechar"
-         class="popup__close-icon">
-        </button>
-        <form class="popup__form" id="addpostform">
-          <fieldset class="popup__fieldset">
-            <h3 class="popup__title"> Novo Local </h3>
-            <input
-            type="text"
-            class="popup__input"
-            id="title"
-            placeholder="Título">
-            <input
-            type="text"
-            class="popup__input"
-            id="image"
-            placeholder="Link de imagem"/>
-          </fieldset>
-          <button class="popup__button" type="submit">
-            Criar
+        <div class="popup__content">
+          <button class="popup__close-button" type="button" id="CloseAddPopup">
+            <img
+            src="./images/CloseIcon.svg"
+            alt="simbolo de X, fechar"
+            class="popup__close-icon">
           </button>
-        </form>
+          <form class="popup__form" id="AddPostForm">
+            <fieldset class="popup__fieldset">
+              <h3 class="popup__title"> Novo Local </h3>
+              <input
+              type="text"
+              class="popup__input"
+              id="title"
+              placeholder="Título">
+              <input
+              type="text"
+              class="popup__input"
+              id="image-link"
+              placeholder="Link de imagem"/>
+            </fieldset>
+            <button class="popup__button" type="submit">
+              Criar
+            </button>
+          </form>
+        </div>
       </section>
       <!--AMPLIAÇÃO DE IMAGEM-->
-      <section class="popup" id="popupimage">
+      <section class="popup" id="PopupImage">
         <div class="popup__content-image">
-          <button class="popup__close-button" id="closeimagepopup">
+          <button class="popup__button popup__button-close" id="CloseImagePopup">
             <img
-              class="popup__close-icon"
+              class="popup__icon popup__icon-close"
               src="images/CloseIcon.svg"
               alt="simbolo de X, fechar"
             />
@@ -129,17 +128,17 @@
               <img
                 src="images/Trash.svg"
                 alt="icone de lixeira"
-                class="element__icon element__icon_trash"
+                class="element__icon-trash"
               />
             </button>
             <img class="element__image">
-            <div class="element__description">
-              <h2 class="element__title"></h2>
+            <div class="element__container">
+              <h2 class="element__text"></h2>
               <button
-              class="element__button element__button_heart"
+              class="element__button"
               type="button">
                 <img
-                class="element__icon element__icon_heart"
+                class="element__icon"
                 src="./images/heart.svg"
                 alt="icone de coração">
               </button>
