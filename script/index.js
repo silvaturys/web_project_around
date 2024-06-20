@@ -74,7 +74,7 @@ function handleAddPostFormSubmit(evt) {
   addElements(newCard);
 
   titleInput.value = "";
-  imageInput.value = "";
+  linkInput.value = "";
 
   closeAddPost();
 }
