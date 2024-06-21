@@ -104,10 +104,14 @@
     width: 40px;
     position: absolute;
     padding: 0;
-    top: 5px;
-    right: 250px;
+    top: -45px;
+    right: -45px;
     border: 0;
     cursor: pointer;
+}
+
+.popup__content-image{
+  position: relative;
 }
 
 .popup__close-icon{
@@ -162,12 +166,4 @@
     font-weight: 400;
     line-height: 17px;
   }
-
-  .popup__type-close{
-    position: absolute;
-    top: 125px;
-    left: 250px;
-    border: 0;
-    cursor: pointer;
-}
 }
