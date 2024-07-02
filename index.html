@@ -61,12 +61,20 @@
             class="popup__input"
             id="name"
             placeholder="Nome"
-            autocomplete="name">
+            autocomplete="name"
+            minlength="2"
+            maxlength="40"
+            required>
+            <span class="popup__error" id="name-error"></span>
             <input
             type="text"
             class="popup__input"
             id="area"
-            placeholder="Sobre mim"/>
+            placeholder="Sobre mim"
+            minlength="2"
+            maxlength="200"
+            required>
+            <span class="popup__error" id="about-error"></span>
           </fieldset>
           <button class="popup__button" type="submit">
             Salvar
@@ -90,12 +98,18 @@
               type="text"
               class="popup__input"
               id="title"
-              placeholder="Título">
+              placeholder="Título"
+              minlength="2"
+              maxlength="30"
+              required>
+              <span class="popup__error" id="title-error"></span>
               <input
-              type="text"
+              type="url"
               class="popup__input"
               id="image-link"
-              placeholder="Link de imagem"/>
+              placeholder="Link de imagem"
+              required>
+              <span class="popup__error" id="image-link-error"></span>
             </fieldset>
             <button class="popup__button" type="submit">
               Criar
@@ -152,5 +166,6 @@
     </footer>
   </div>
   <script src="./script/index.js"></script>
+  <script src="./script/validate.js"></script>
 </body>
 </html>

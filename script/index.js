@@ -159,6 +159,34 @@ function closeImage() {
   openPopupImage.classList.remove("popup__image_opened");
 }
 
-//eventos open image
-
 closePopupImage.addEventListener("click", closeImage);
+
+popupOpen.addEventListener("click", function (evt) {
+  if (evt.target === popupOpen) {
+    closePopup();
+  }
+});
+
+addPostPopup.addEventListener("click", function (evt) {
+  if (evt.target === addPostPopup) {
+    closeAddPost();
+  }
+});
+
+openPopupImage.addEventListener("click", function (evt) {
+  if (evt.target === openPopupImage) {
+    closeImage();
+  }
+});
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_opened");
+    const openedImage = document.querySelector(".popup__image_opened");
+    if (openedPopup || openedImage) {
+      closePopup(openedPopup);
+      closeAddPost(openedPopup);
+      closeImage(openedImage);
+    }
+  }
+});
