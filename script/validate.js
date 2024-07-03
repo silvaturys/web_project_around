@@ -60,6 +60,8 @@ function setEventListeners(formElement, settings) {
   const buttonElement = formElement.querySelector(
     settings.submitButtonSelector
   );
+
+  // Atualiza o estado do botão ao abrir o popup
   toggleButtonState(inputList, buttonElement, settings);
 
   inputList.forEach((inputElement) => {
@@ -67,6 +69,15 @@ function setEventListeners(formElement, settings) {
       checkInputValidity(formElement, inputElement, settings);
       toggleButtonState(inputList, buttonElement, settings);
     });
+  });
+
+  formElement.addEventListener("reset", () => {
+    setTimeout(() => {
+      inputList.forEach((inputElement) => {
+        hideInputError(formElement, inputElement, settings);
+      });
+      toggleButtonState(inputList, buttonElement, settings);
+    }, 0);
   });
 }
 

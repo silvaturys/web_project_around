@@ -190,3 +190,30 @@ document.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+function openEditProfilePopup() {
+  const editProfilePopup = document.getElementById("editProfilePopup");
+  const nameInput = document.getElementById("name");
+  const areaInput = document.getElementById("area");
+  const saveButton = editProfilePopup.querySelector(".popup__button");
+
+  nameInput.value = '';  // Limpa o campo de nome
+  areaInput.value = '';  // Limpa o campo de área
+
+  // Atualiza o estado do botão ao abrir o popup
+  toggleButtonState([nameInput, areaInput], saveButton, {
+    inactiveButtonClass: "popup__button_disabled",
+  });
+
+  editProfilePopup.classList.add("popup_opened");
+}
+
+// Função para fechar o popup
+function closeEditProfilePopup() {
+  const editProfilePopup = document.getElementById("editProfilePopup");
+  editProfilePopup.classList.remove("popup_opened");
+}
+
+// Evento para o botão de edição de perfil
+document.querySelector(".profile__edit-button").addEventListener("click", openEditProfilePopup);
+document.getElementById("closePopupButton").addEventListener("click", closeEditProfilePopup);
