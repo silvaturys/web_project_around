@@ -4,7 +4,8 @@
 --Recursos Utilizados:
 *HTML
 *CSS
-*JavaScript
+*JavaScript 
+*JavaScript Modular
 *Norma BEM
 *Figma
 
