@@ -6,7 +6,6 @@
   <meta name="author" content="Arthur Michel" />
   <meta name="description" content="Travel site" />
   <meta name="keywords" content="Explore, US, Mountain"/>
-  <link rel="stylesheet" href="pages/index.css">
   <link rel="shortcut icon" href="./favicon.svg"/>
   <link rel="preconnect" href="./vendor/fonts/Inter-4.0/">
   <title>Around The U.S.</title>
@@ -16,7 +15,8 @@
 <!--LOGO-->
 <header class="header">
   <img
-  src="favicon.svg"
+  src="<%=require('./favicon.svg')%>"
+  src="./favicon.svg"
   alt="logo around the us"
   class="header__logo">
   </header>
@@ -24,7 +24,7 @@
 <!--AREA DO PERFIL-->
       <section class="profile">
         <img
-        src="./images/perfil_image.png"
+        src="<%=require('./images/perfil_image.png')%>"
         alt="imagem de um idoso"
         class="profile__image">
         <div class="profile__intro">
@@ -32,7 +32,7 @@
             <h1 class="profile__name"> Jacques Cousteau </h1>
             <button type="button" class="profile__edit-button">
               <img
-              src="./images/edit__vector.svg"
+              src="<%=require('./images/edit__vector.svg')%>"
               alt="icone de editar algo, uma caneta">
             </button>
           </div>
@@ -40,7 +40,7 @@
         </div>
         <button type="button" class="profile__add-button">
           <img
-          src="./images/add__button.svg"
+          src="<%=require('./images/add__button.svg')%>"
           alt="símbolo de adição">
         </button>
       </section>
@@ -49,7 +49,7 @@
         <div class="popup__content">
         <button class="popup__close-button" type="button" id="closePopupButton">
           <img
-          src="./images/CloseIcon.svg"
+          src="<%=require('./images/CloseIcon.svg')%>"
           alt="simbolo de X, fechar"
           class="popup__close-icon">
         </button>
@@ -88,7 +88,7 @@
         <div class="popup__content">
           <button class="popup__close-button" type="button" id="CloseAddPopup">
             <img
-            src="./images/CloseIcon.svg"
+            src="<%=require('./images/CloseIcon.svg')%>"
             alt="simbolo de X, fechar"
             class="popup__close-icon">
           </button>
@@ -123,8 +123,8 @@
         <div class="popup__content-image">
           <button class="popup__type-close" id="CloseImagePopup">
             <img
+              src="<%=require('./images/CloseIcon.svg')%>"
               class="popup__icon popup__icon-close"
-              src="images/CloseIcon.svg"
               alt="simbolo de X, fechar"
             />
           </button>
@@ -140,7 +140,7 @@
             class="element__button element__button_trash"
             type="button">
               <img
-                src="images/Trash.svg"
+                src="<%=require('./images/trash.svg')%>"
                 alt="icone de lixeira"
                 class="element__icon-trash"
               />
@@ -151,10 +151,10 @@
               <button
               class="element__button"
               type="button">
-                <img
-                class="element__icon"
-                src="./images/heart.svg"
-                alt="icone de coração">
+              <img
+                src="<%=require('./images/heart.svg')%>"
+                alt="icone de coração"
+                class="element__icon">
               </button>
             </div>
           </div>
@@ -166,10 +166,5 @@
       <p class="footer__copyright"> &#169; 2024 Arthur Michel S F </p>
     </footer>
   </div>
-  <script type="module" src="./script/utils.js"></script>
-  <script type="module" src="./script/card.js"></script>
-  <script type="module" src="./script/formValidator.js"></script>
-  <script type="module" src="./script/index.js"></script>
-
 </body>
 </html>
