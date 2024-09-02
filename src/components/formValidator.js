@@ -8,9 +8,11 @@ export default class FormValidator {
     this._buttonElement = this._formElement.querySelector(
       this._settings.submitButtonSelector
     );
+    console.log('FormValidator initialized', this._settings, this._formElement);
   }
 
   _showInputError(inputElement, errorMessage) {
+    console.log('Showing input error', inputElement, errorMessage);
     const errorElement = this._formElement.querySelector(
       `#${inputElement.id}-error`
     );
@@ -20,6 +22,7 @@ export default class FormValidator {
   }
 
   _hideInputError(inputElement) {
+    console.log('Hiding input error', inputElement);
     const errorElement = this._formElement.querySelector(
       `#${inputElement.id}-error`
     );
@@ -29,6 +32,7 @@ export default class FormValidator {
   }
 
   _getErrorMessage(inputElement) {
+    console.log('Getting error message for', inputElement);
     if (inputElement.validity.valueMissing) {
       return "Preencha esse campo.";
     }
@@ -41,6 +45,7 @@ export default class FormValidator {
   }
 
   _checkInputValidity(inputElement) {
+    console.log('Checking input validity for', inputElement);
     if (!inputElement.validity.valid) {
       const errorMessage = this._getErrorMessage(inputElement);
       this._showInputError(inputElement, errorMessage);
@@ -50,26 +55,35 @@ export default class FormValidator {
   }
 
   _hasInvalidInput() {
-    return this._inputList.some((inputElement) => {
-      return !inputElement.validity.valid;
+    const invalid = this._inputList.some((inputElement) => {
+      const validity = !inputElement.validity.valid;
+      console.log('Checking if input is invalid', inputElement, validity);
+      return validity;
     });
+    console.log('Has invalid input:', invalid);
+    return invalid;
   }
 
   _toggleButtonState() {
+    console.log('Toggling button state');
     if (this._hasInvalidInput()) {
       this._buttonElement.classList.add(this._settings.inactiveButtonClass);
       this._buttonElement.disabled = true;
+      console.log('Button disabled');
     } else {
       this._buttonElement.classList.remove(this._settings.inactiveButtonClass);
       this._buttonElement.disabled = false;
+      console.log('Button enabled');
     }
   }
 
   _setEventListeners() {
+    console.log('Setting event listeners');
     this._toggleButtonState();
 
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
+        console.log('Input event detected', inputElement);
         this._checkInputValidity(inputElement);
         this._toggleButtonState();
       });
@@ -77,8 +91,10 @@ export default class FormValidator {
   }
 
   enableValidation() {
+    console.log('Enabling validation');
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
+      console.log('Form submission prevented');
     });
 
     this._setEventListeners();

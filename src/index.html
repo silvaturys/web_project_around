@@ -16,7 +16,6 @@
 <header class="header">
   <img
   src="<%=require('./favicon.svg')%>"
-  src="./favicon.svg"
   alt="logo around the us"
   class="header__logo">
   </header>
@@ -27,6 +26,11 @@
         src="<%=require('./images/perfil_image.png')%>"
         alt="imagem de um idoso"
         class="profile__image">
+        <img
+        src="<%=require('./images/editprofile.svg')%>"
+        alt="icone caneta"
+        class="profile__avatar-edit"
+        id="profile__avatar-edit">
         <div class="profile__intro">
           <div class="profile__container">
             <h1 class="profile__name"> Jacques Cousteau </h1>
@@ -44,7 +48,7 @@
           alt="símbolo de adição">
         </button>
       </section>
-      <!--EDIÇÃO DE PERFIL-->
+      <!-- EDIÇÃO DE PERFIL-->
       <section class="popup" id="editProfilePopup">
         <div class="popup__content">
         <button class="popup__close-button" type="button" id="closePopupButton">
@@ -68,6 +72,7 @@
             required>
             <span class="popup__error" id="name-error"></span>
             <input
+            name="area"
             type="text"
             class="popup__input"
             id="area"
@@ -83,7 +88,7 @@
         </form>
       </div>
       </section>
-      <!--ADIÇÃO DE LOCAL-->
+    ADIÇÃO DE LOCAL
       <section class="popup" id="addPostPopup">
         <div class="popup__content">
           <button class="popup__close-button" type="button" id="CloseAddPopup">
@@ -96,6 +101,7 @@
             <fieldset class="popup__fieldset">
               <h3 class="popup__title"> Novo Local </h3>
               <input
+              name="title"
               type="text"
               class="popup__input"
               id="title"
@@ -105,6 +111,7 @@
               required>
               <span class="popup__error" id="title-error"></span>
               <input
+              name="link"
               type="url"
               class="popup__input"
               id="image-link"
@@ -132,7 +139,7 @@
           <p class="popup__paragraph"></p>
         </div>
       </section>
-<!--AREA DAS IMAGENS-->
+      <!--AREA DAS IMAGENS-->
       <section class="elements">
         <template id="elements-template">
           <div class="element">
@@ -156,10 +163,47 @@
                 alt="icone de coração"
                 class="element__icon">
               </button>
+              <span class="elements__likes-number"></span>
             </div>
           </div>
         </template>
       </section>
+      <!--POPUP DE CONFIRMAÇÃO-->
+      <section class="popup " id="popup-delete-confirmation">
+        <div class="popup__container popup__form-confirmation">
+            <img
+              src="<%=require ('./images/CloseIcon.svg')%>"
+              alt="Ícone de fechar"
+              class="popup__close-button"
+            />
+            <h2 class="popup__title popup__message">Tem certeza?</h2>
+            <button type="button" value="submit" class="popup__button">Sim</button>
+          </form>
+        </div>
+      </section>
+      <!--AVATAR POPUP-->
+      <section class="popup" id="popup-avatar-profile">
+        <div class="popup__container">
+            <img
+            src="<%=require ('./images/CloseIcon.svg')%>"
+            alt="Encerrar"
+            class="popup__close-button"
+          />
+          <h2 class="popup__header">Trocar foto de perfil</h2>
+          <form id="profile-avatar-form" class="popup__form">
+          <input
+            type="url"
+            class="popup__input"
+            id="  input-link"
+            name="avatarLink"
+            placeholder="Link da imagem"
+            required
+          />
+          <span class="input-link-error popup__error" >Por favor, introduza um endereço da web.</span>
+          <button type="submit" value="submit" class="popup__button"></button>
+        </form>
+      </div>
+    </section>
     </main>
 <!--RODAPÉ-->
     <footer class="footer">

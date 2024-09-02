@@ -77,7 +77,7 @@ document.querySelector('.profile__edit-button').addEventListener('click', () => 
 const addPostPopup = new PopupWithForm('#addPostPopup', (data) => {
   const cardData = {
     name: data.title,
-    link: data['image-link']
+    link: data.link
   };
   const card = new Card(cardData, '#elements-template', () => {
     popupWithImage.open(cardData.name, cardData.link);
