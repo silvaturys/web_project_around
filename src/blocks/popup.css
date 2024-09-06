@@ -167,6 +167,17 @@
 
 }
 
+.popup__message{
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 768px){
   .popup {
     max-width: 282px;

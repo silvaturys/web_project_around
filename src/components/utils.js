@@ -1,3 +1,6 @@
+export const elementArea = document.querySelector(".elements");
+export const avatarBtn = document.querySelector(".profile__avatar-edit");
+
 //botao edit profile
 
 const editProfile = document.querySelector(".profile__edit-button");
