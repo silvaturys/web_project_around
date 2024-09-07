@@ -62,8 +62,8 @@
 }
 
 .element__icon{
-  margin-bottom: 10px;
   cursor: pointer;
+  position: relative;
 }
 
 .element__icon-trash{
@@ -71,6 +71,18 @@
   top: 35px;
   left: 125px;
 }
+
+.elements__likes-number {
+  font-family: "Inter", "sans-serif";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.7px;
+  position: absolute;
+  border: none;
+  width: 21px;
+  height: 19px;
+}
+
 
 .elements__icon-active {
   opacity: 1;

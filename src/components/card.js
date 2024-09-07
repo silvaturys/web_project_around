@@ -39,7 +39,7 @@ export default class Card {
     this._elementName.textContent = this._name;
     this._popupImg = document.querySelector("#PopupImage");
     if (this._likes.some((item) => item._id === this._userId)) {
-      this._likeBtn.classList.toggle("elements__like-active");
+      this._likeBtn.classList.toggle("elements__icon-active");
     }
     this._likesCounter = this._element.querySelector(".elements__likes-number");
     this._likesCounter.textContent = this._likes.length;
