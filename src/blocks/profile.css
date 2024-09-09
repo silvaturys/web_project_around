@@ -81,22 +81,28 @@
   opacity: 60%;
 }
 
+.profile__avatar-container{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 120px;
+}
+
 .profile__avatar-edit {
   width: 26px;
   height: 26px;
-  position: relative;
-  margin: 10px;
-  padding: 50px;
-  right: 0;
-  margin: auto;
+  position: absolute;
   opacity: 0;
   background-color: transparent;
 }
 
-.profile__avatar-edit:hover {
-opacity: 1;
+.profile__avatar-container:hover .profile__image {
+  opacity: 0.3;
 }
 
+.profile__avatar-container:hover .profile__avatar-edit{
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px){
   .profile{
