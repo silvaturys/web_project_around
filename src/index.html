@@ -23,14 +23,16 @@
   <!-------------------------------AREA DO PERFIL----------------------------->
       <section class="profile">
         <div class="profile__container">
-        <img
-        src="<%=require('./images/perfil_image.png')%>"
-        alt="imagem de um idoso"
-        class="profile__image">
-        <img
-        src="<%=require('./images/editprofile.svg')%>"
-        alt="icone caneta"
-        class="profile__avatar-edit">
+          <div class="profile__avatar-container">
+            <img
+            src="<%=require('./images/perfil_image.png')%>"
+            alt="imagem de um idoso"
+            class="profile__image">
+            <img
+            src="<%=require('./images/editprofile.svg')%>"
+            alt="icone caneta"
+            class="profile__avatar-edit">
+          </div>
         <h1 class="profile__name"> Jacques Cousteau </h1>
         <p class="profile__area"> Explorar </p>
         <button type="button" class="profile__edit-button">
@@ -152,6 +154,7 @@
             <img class="element__image">
             <div class="element__container">
               <h2 class="element__text"></h2>
+              <div class="element__info-like">
               <button
               class="element__button"
               type="button">
@@ -161,6 +164,7 @@
                 class="element__icon">
               </button>
               <span class="elements__likes-number"></span>
+            </div>
             </div>
           </div>
         </template>
